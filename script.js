@@ -4,7 +4,7 @@ const finalizarTexto = document.getElementById('end_text');
 const sectionArray = document.getElementById('section_array');
 
 //Generamos un array para luego almacenarlo en el localstorage.
-const palabrasAleatorias = ['esto', 'es', 'una', 'prueba', 'para', 'saber', 'si', 'la', 'funcionalidad', 'del', 'codigo', 'es', 'correcta', 'y', 'aplica', 'al', 'boton'];
+const palabrasAleatorias = ['gracias', 'por', 'iniciar', 'el', 'texto', 'por', 'favor', 'presiona', 'finalizar', 'el', 'texto', 'y', 'la', 'pagina', 'borrara', 'estas', 'palabras'];
 
 //Aplicamos el metodo JSON STRINGIFY para convertir el array en una cadena de texto.
 localStorage.setItem('palabrasAleatorias', JSON.stringify(palabrasAleatorias));
