@@ -11,9 +11,18 @@ localStorage.setItem('palabrasAleatorias', JSON.stringify(palabrasAleatorias));
 
 //Creamos la funcion que nos va a permitir insertar la cadena de texto o eliminarla de nuestro HTML.
 function iniciarTextoEnHtml()   {
+    const palabrasAlmacenadas = localStorage.getItem('palabrasAleatorias');
+
+    let palabras;
+    if (palabrasAlmacenadas)    {
+        palabras = JSON.parse(palabrasAlmacenadas);
+    } else {
+        palabras = palabrasAleatorias;
+    }
+
     sectionArray.innerHTML = '';
 
-    palabrasAleatorias.forEach((elemento) => {
+    palabras.forEach((elemento) => {
         const parrafo = document.createElement('p');
         parrafo.textContent = elemento;
         sectionArray.appendChild(parrafo);
